@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ms" dir="ltr">
+<head>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="../dropdown.css">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url("https://github.com/JstMStudio/New-Platform/blob/main/background%202.gif?raw=true");
+background-repeat: no-repeat;
+background-attachment: fixed; 
+background-size: cover;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #34eb9e;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: pink;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.contentbox {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+background-color: yellow;
+border: 6px solid red;
+color: green;
+padding: 8px;
+}
+
+.navbutton {
+padding:3px;
+font-weight: bold;
+color: purple;
+float: left;
+}
+
+.navbutton:hover {
+padding:3px;
+font-weight: bold;
+color: green;
+float: left;
+}
+
+.navbutton:active {
+padding:3px;
+font-weight: bold;
+color: red;
+float: left;
+}
+
+/* Theme ovveride */
+
+.collapsible {
+  cursor: pointer;
+  border: none;
+  padding:13px;
+  text-align: left;
+  outline: none;
+  font-size: 11px;
+position: -webkit-sticky; /* Safari */
+  position: sticky;
+  bottom: 0;
+  background-color:#033d0b;
+  color: cyan;
+    z-index:150;
+    position: fixed;
+    _position:absolute;
+    _top:expression(eval(document.documentElement.scrollTop+
+        (document.documentElement.clientHeight-this.offsetHeight)));
+        right: 5px;
+        box-shadow: 5px 5px grey;
+        margin-bottom:10px;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: silver;
+  position: -webkit-sticky; /* Safari */
+  background-color:#03373d;
+  text-align: center;
+  color: cyan;
+      position:fixed;
+    z-index:150;
+    _position:absolute;
+    _top:expression(eval(document.documentElement.scrollTop+
+        (document.documentElement.clientHeight-this.offsetHeight)));
+        right: 0;
+        bottom: 0;
+        font-weight: bold;
+}
+
+.active {
+  bottom:200px;
+          box-shadow: none;
+          margin-bottom:0px;
+  
+}
+
+.dark-mode .contentbox {
+  background-color: black;
+  color: cyan;
+}
+
+.red-mode .contentbox {
+  background-color: red;
+}
+
+.blue-mode .contentbox {
+  background-color: blue;
+  color: cyan;
+}
+
+.green-mode .contentbox {
+  background-color: green;
+  color: yellow;
+}
+
+.yellow-mode .contentbox {
+  background-color: yellow;
+  color: green;
+}
+
+.orange-mode .contentbox {
+  background-color: orange;
+  color: blue;
+}
+
+.purple-mode .contentbox {
+  background-color: purple;
+  color: cyan;
+}
+
+.magenta-mode .contentbox {
+  background-color: magenta;
+  color: #1a2b22;
+}
+  
+.text-black .contentbox {
+  color: black;
+}
+
+.text-red .contentbox {
+  color: red;
+}
+
+.text-blue .contentbox {
+  color: blue;
+}
+
+.text-green .contentbox {
+  color: green;
+}
+
+.text-yellow .contentbox {
+  color: yellow;
+}
+
+.text-orange .contentbox {
+  color: orange;
+}
+
+.text-purple .contentbox {
+  color: purple;
+}
+
+.text-magenta .contentbox {
+  color: magenta;
+}
+
+.button2 {
+float:center;
+background-color: black;
+  color: red;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  color: yellow;
+}
+
+/* Theme override */
+
+.overlay {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+    width: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.9);
+  background-color: #E4E9F7;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content{
+  position: relative;
+  top: 8%;
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+  color:green;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+  padding:10px;
+}
+
+.overlay-content p{
+padding:16px;
+text-align: center;
+padding-right: 20px;
+}
+
+.overlay-content li{
+text-align:left;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: green;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.collapsible2 {
+  cursor: pointer;
+  outline: none; 
+  font-size:30px;
+  background-color:cyan;
+  width:100%;
+  text-align:center;
+  color:purple;
+  padding:10px;
+  font-weight: bold;
+  border-style: solid;
+}
+
+.content2 {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: cyan;
+  color: purple;
+  font-weight: bold;
+  text-align:center;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL button {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: yellow;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: green;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: green;
+  border: none;
+  color: yellow;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 350px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL button {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: yellow;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: green;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL button {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: yellow;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: green;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+.collapsible2 {
+  font-size: 15px;
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: yellow;
+  font-size: 18px;
+  padding: 12px;
+  color: green;
+  width: 100%
+}
+
+.content2 {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: blue;
+  text-align:center;
+  color: yellow;
+}
+
+/* Directory Content */
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL button {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: yellow;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: green;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<h2 style="color: cyan;text-align:center;">Platform JstMStudio</h2>
+   <a href="index.html">Laman Utama</a>
+   <a href="about.html">Perihal</a>
+   <a href="client.html">Pelanggan</a>
+   <a href="documentation.html">Dokumentasi</a>
+   <a href="app.html">Apl</a>
+</div>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav11()">&times;</a>
+  <div class="overlay-content">
+<h1>Watak</h1>
+<p>Siri buku Wira Remaja menampilkan banyak watak merentas banyak cerita dan musim. Siri buku Wira Remaja mengandungi banyak watak rekaan hebat yang dibangunkan oleh pasukan Wira Remaja. Semua watak kami merentas semua cerita Wira Remaja disenaraikan di sini:</p>
+<br>
+<div style="border-width:3px;border-color:red;border-style:solid;background-color:yellow;padding:16px;">
+<h3>Hu Jie</h3>
+<p>Hu Jie, wira yang berani dan pantas dalam Wira Remaja. Adik kepada Li Hui.</p>
+  <li>Nama: Hu Jie</li>
+  <br>
+<li>Jantina: Lelaki</li>
+<br>
+<li>Umur: 14</li>
+<br>
+<li>Etnik: Cina</li>
+<br>
+<li>Pekerjaan: Wira</li>
+<br>
+<li>Peribadi: </li>
+<li>Dia berani. Dia melindungi kakaknya apabila mereka menghadapi masalah dan juga berani menghadapi penjahat nakal.</li>
+<li>Dia juga pantas melakukan sesuatu tetapi sangat tidak sabar menunggu.</li>
+<li>Permainan, dia boleh menjadi suka bermain apabila melakukan perkara penting. </li>
+<li>Lucu, dia suka membuat orang lain ketawa, terutamanya kakaknya.</li>
+<br>
+<li>Kelemahan:</li>
+<li>Tidak sabar, dia tidak sabar pada kebanyakan masa dan tidak sabar menunggu orang lain.</li>
+<br>
+<li>Kuasa:</li>
+  <li>Kelajuan
+  <li>Berlari, dia boleh berlari dengan sangat pantas dari lokasi A ke lokasi B dalam masa yang singkat. Dia boleh berlari sepantas kilat. </li>
+  <li>Puting beliung, dia boleh berlari dengan sangat pantas untuk mencipta puting beliung kecil di dalam kawasan kecil yang akan menimbulkan angin kencang. </li>
+  <li>Penjana tenaga, dia boleh menjana tenaga elektrik menggunakan kelajuannya yang boleh memulihkan kehabisan kuasa.</li>
+  <br>
+<li>Alat:</li>
+<li>Perisai, dia boleh melindungi dirinya daripada serangan musuh dan penjahat dengan bersembunyi di sebalik perisainya.</li>
+</div>
+<br>
+<div style="border-width:3px;border-color:red;border-style:solid;background-color:yellow;padding:16px;">
+<h3>Li Hui</h3>
+  <p>Li Hui, kakak kepada Hu Jie. Wira yang pemalu tetapi bijak dalam Wira Remaja. </p>
+    <li>Nama: Li Hui</li>
+    <br>
+    <li>Jantina: Perempuan</li>
+    <br>
+    <li>Umur: 14</li>
+    <br>
+    <li>Etnik: Cina</li>
+    <br>
+  <li>Pekerjaan: Wira</li>
+  <br>
+  <li>Peribadi:</li>
+    <li>Li Hui bijak, dia menyelesaikan sebarang masalah sukar dengan mudah.</li>
+    <li>Li Hui juga pemalu, dia takut dengan kebanyakan orang yang dia jumpa.</li>
+    <li>Sweet and Careful, dia boleh berhati-hati menjaga adik lelakinya.</li>
+  <br>
+  <li>Kelemahan:</li>
+    <li>Malu, dia takut menghadapi kebanyakan musuh. Dia mudah digeruni oleh musuh yang menakutkan.</li>
+<br>
+<li>Kuasa</li>
+    <li>Teknologi</li>
+<li>Mengkomputer, dia boleh melakukan beberapa pengkomputeran seperti menyediakan komputer, dsb. Dia boleh menyediakan komputer baharu untuk melakukan perkara yang dia perlukan.</li>
+<li>Menggodam, dia boleh menggodam infrastruktur teknologi lain dan menjadikannya tidak boleh diakses atau perisian tidak selamat.</li>
+  <br>
+<li>Alat</li>
+<li>Bots, dia mempunyai 2 bot menemaninya pada setiap masa yang boleh membantu membawa barangan, mempertahankannya dan lain-lain. Dia boleh memprogramkan bot untuk melakukan apa sahaja yang dia perlukan.</li>
+</div>
+</div>
+</div>
+
+<div id="myNav1" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+  <div class="overlay-content">
+<h1>Lokasi</h1>
+<p>Siri buku Wira Remaja mengandungi banyak lokasi hebat, dibangunkan dan dibina oleh pasukan Wira Remaja. Semua lokasi yang disenaraikan di sini ialah lokasi utama yang ditayangkan perdana dalam banyak musim Wira Remaja. Kami mengandungi senarai semua lokasi dalam Wira Remaja di sini.</p>
+<br>
+<div style="border-width:3px;border-color:red;border-style:solid;background-color:yellow;">
+<div style="padding:16px;">
+<h2>Perle</h2>
+<p>Perle ialah kampung halaman Li Hui dan Hu Jie, tempat mereka dibesarkan. Perle adalah sebuah bandar yang maju. Perle ialah bandar utama dalam Wira Remaja Musim 1. Perle menampilkan persekitaran yang terbaik dan paling bersih. Perle ditetapkan di tempat pada masa hadapan.</p>
+<br>
+<h3 style="text-align:center;">Perle</h3>
+<br>
+  <li>VRzoo: VRzoo ialah zoo di Perle. Ia adalah zoo realiti maya untuk pengunjung melihat haiwan di zoo menggunakan realiti maya.</li>
+  <br>
+  <li>VRmuseum: VRmuseum ialah sebuah muzium besar di Perle. Ia adalah muzium realiti maya untuk semua orang melawati keseluruhan muzium tanpa berjalan kaki dan melawat semua yang dipamerkan menggunakan realiti maya.</li>
+  <br>
+  <li>VRmall: VRmall ialah pusat beli-belah mega di Perle. Ia adalah pusat beli-belah realiti maya untuk semua orang melawat dan membeli barangan. Pelawat boleh menggunakan VR untuk melawat pusat beli-belah realiti maya untuk membeli barangan.</li>
+  <br>
+  <li>Hutan: Perle juga mempunyai hutan mega juga. Hutan Perle menanam pelbagai jenis pokok, daripada beri biru hingga pisang. Hutan mega juga membantu menjaga kebersihan alam sekitar juga.</li>
+  <br>
+  <li>VRschool: Perle juga mempunyai sekolah. Kanak-kanak Perle boleh menghadiri sekolah untuk belajar dalam realiti maya. Perle menyediakan teknologi terbaik untuk pelajar belajar.</li>
+  <br>
+  <li>VRcinema: Perle mempunyai pawagam untuk semua rakyat juga. Pawagam Perle membenarkan semua pemerhati menonton filem dalam realiti maya. Penonton boleh menonton filem di VRcinema bersama keluarga dan rakan mereka.</li>
+  <br>
+  <li>VRbank: Perle juga mempunyai bank. VRbank membolehkan semua orang menyimpan wang di bank dalam dunia realiti maya. VRbank juga membenarkan semua orang menyimpan wang dalam bank realiti maya juga.</li>
+  <br>
+  <li>Peaceful Central（宁中）: Peaceful Central ialah kejiranan di mana rumah kembar berada dan tinggal. Peaceful Central ialah kawasan kejiranan yang indah dan bersih.</li>
+  <br>
+  </div>
+  </div>
+  </div>
+  </div>
+
+<div id="myNav2" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+  <div class="overlay-content">
+<h1>Kenderaan</h1>
+<p>Siri buku Wira Remaja mengandungi banyak kenderaan hebat juga! Siri buku Wira Remaja menampilkan banyak kenderaan hebat yang dibangunkan oleh pasukan Wira Remaja untuk watak dalam siri buku Wira Remaja. </p>
+<br>
+<div style="border-width:3px;border-color:red;border-style:solid;background-color:yellow">
+<div style="padding:16px;">
+<h2>Hover Car</h2>
+<p>Hover Car ialah kenderaan yang dimiliki oleh Li Hui dan Hu Jie sebagai cara untuk bersiar-siar. Ia boleh terbang mengelilingi bandar dan juga ke angkasa lepas. Kereta Hover telah dicipta oleh Li Hui dan Hu Jie ketika mereka berumur 11 tahun.</p>
+<br>
+<p>Kereta Hover boleh masuk ke dalam air dan terbang ke angkasa. Ia boleh membantu Li Hui dan Hu Jie pergi ke bawah air di sungai bandar untuk menemui dan menghentikan penjahat. Hover Car menawarkan banyak ciri dan kebolehan hebat untuk Li Hui dan Hu Jie. Semua ciri disenaraikan di bawah:</p>
+<br>
+<li>Flying: Hover Car boleh terbang mengelilingi Perle, membawa Li Hui dan Hu Jie ke mana-mana tempat yang mereka mahu.</li>
+<br>
+<li>Kapal Selam: Hover Car juga boleh pergi ke bawah air seperti kapal selam. Kereta Hover boleh membawa Li Hui dan Hu Jie ke tempat paling dalam di bawah air.</li>
+<br>
+<li>Kelajuan: Kereta Hover boleh pergi dengan sangat pantas di langit, di bawah air dan di darat untuk menghantar Li Hui dan Hu Jie ke mana-mana sahaja.</li>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div id="myNav3" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
+  <div class="overlay-content">
+<h1>Cerita</h1>
+<p>Siri buku Wira Remaja mengandungi banyak cerita buku yang menakjubkan dan menarik, yang ditulis oleh pasukan Wira Remaja. Setiap kisah Wira Remaja menampilkan kembar Cina, Li Hui dan Hu Jie menjalani pengembaraan yang menarik. Setiap cerita dijangka sekitar 21-30 minit masa bacaan standard juga. Anda juga boleh membaca setiap dan semua kisah Wira Remaja di sini.</p>
+   <br>
+   <hr>
+   <br>
+   <h2>Musim 1</h2>
+   <p>Musim 1 ialah musim pertama Wira Remaja. Musim 1 akan menampilkan Hu Jie dan Li Hui di kampung halaman mereka, Perle. </p>
+   <br>
+   <h4>Tiada cerita tersedia</h4>
+  </div>
+</div>
+
+<div id="main">
+  <div class="contentbox">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()" style="" class="navbutton">&#9776;</span>
+  <br><br>
+  <h1>Wira Remaja</h1>
+<p>Pada tahun 2100, terdapat dua wira remaja kembar Cina, bernama Li Hui dan Hu Jie bersama ibu bapa mereka di Perle keluar untuk pengembaraan untuk melindungi bandar besar mereka! Wira Remaja ialah siri buku Fiksyen Sains dan Pengembaraan, siri buku yang memfokuskan pada masa hadapan sains dan pengembaraan. Siri ini menampilkan watak utama, Li Hui dan Hu Jie, kembar Cina dalam pengembaraan yang mengagumkan di bandar mereka, Perle. Wira Remaja ditulis dan dicipta oleh Jst Tan, diedarkan oleh JstMStudio ke dalam pelbagai platform.</p>
+<br>
+<p>Siri buku Wira Remaja kini tersedia untuk dibaca pada berbilang platform yang diterbitkan secara rasmi oleh kami, JstMStudio. Sila baca siri buku Wira Remaja di bawah secara sah:</p>
+<br>
+<li>JstMStudio</li>
+<li>Wattpad</li>
+<br>
+<hr>
+<br>
+<h1>Berita</h1>
+<p>Selamat datang ke Berita Wira Remaja! Halaman berita untuk mendapatkan berita terkini tentang Wira Remaja! Tempat untuk mendapatkan berita terkini tentang Wira Remaja, daripada episod baharu hingga musim baharu, semuanya berkumpul di sini untuk anda baca! Semak berita terkini berkaitan Wira Remaja di sini.</p>
+<br>
+<hr style="width:60%;margin-left:auto;margin-right:auto;">
+<br>
+<h2>Semua Berita</h2>
+<br>
+<h3>Malangnya, tiada berita tersedia buat masa ini. </h3>
+<br>
+<hr>
+<br>
+<h2>Bahan Cerita</h2>
+    <div class="dropdown">
+  <button class="dropbtn">All Pages <i class='bx bxs-caret-down-circle'></i></button>
+  <div class="dropdown-content">
+  <a onclick="openNav11()">Watak <i class='bx bx-door-open'></i></a>
+  <a onclick="openNav1()">Lokasi <i class='bx bx-location-plus' ></i></a>
+  <a onclick="openNav2()">Kenderaan <i class='bx bxs-car'></i></a>
+  <a onclick="openNav3()">Kisah <i class='bx bxs-book'></i></a>
+  </div>
+</div>
+<br>
+<script>
+function openNav11() {
+  document.getElementById("myNav11").style.width = "100%";
+}
+
+function closeNav11() {
+  document.getElementById("myNav11").style.width = "0%";
+}
+
+function openNav1() {
+  document.getElementById("myNav1").style.width = "100%";
+}
+
+function closeNav1() {
+  document.getElementById("myNav1").style.width = "0%";
+}
+
+function openNav2() {
+  document.getElementById("myNav2").style.width = "100%";
+}
+
+function closeNav2() {
+  document.getElementById("myNav2").style.width = "0%";
+}
+
+function openNav3() {
+  document.getElementById("myNav3").style.width = "100%";
+}
+
+function closeNav3() {
+  document.getElementById("myNav3").style.width = "0%";
+}
+</script>
+  </div>
+</div>
+
+<button type="button" class="collapsible" style="margin-top:60px;"><h3>&#9776; Personalisation du theme</h3></button>
+<div class="content">
+<p>Couleur du texte</p>
+<button onclick="myFunction11()" style="background-color: black;" class="button2"></button>
+<button onclick="myFunction12()" style="background-color: red;" class="button2"></button>
+<button onclick="myFunction13()" style="background-color: blue;" class="button2"></button>
+<button onclick="myFunction14()" style="background-color: green;" class="button2"></button>
+<button onclick="myFunction15()" style="background-color: yellow;" class="button2"></button>
+<button onclick="myFunction16()" style="background-color: oren;" class="button2"></button>
+<button onclick="myFunction17()" style="background-color: purple;" class="button2"></button>
+<button onclick="myFunction18()" style="background-color: magenta;" class="button2"></button>
+<br>
+<br>
+     <p>Pelan Tema-tema d'arrière</p>
+<button onclick="myFunction()" style="background-color: black;" class="button2"></button>
+<button onclick="myFunction2()" style="background-color: red;" class="button2"></button>
+<button onclick="myFunction3()" style="background-color: blue;" class="button2"></button>
+<button onclick="myFunction4()" style="background-color: green;" class="button2"></button>
+<button onclick="myFunction5()" style="background-color: yellow;" class="button2"></button>
+<button onclick="myFunction6()" style="background-color: orange;" class="button2"></button>
+<button onclick="myFunction7()" style="background-color: purple;" class="button2"></button>
+<button onclick="myFunction8()" style="background-color: magenta;" class="button2"></button>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+function myFunction2() {
+   var element = document.body;
+   element.classList.toggle("red-mode");
+}
+
+function myFunction3() {
+   var element = document.body;
+   element.classList.toggle("blue-mode");
+}
+
+function myFunction4() {
+   var element = document.body;
+   element.classList.toggle("green-mode");
+}
+
+function myFunction5() {
+   var element = document.body;
+   element.classList.toggle("yellow-mode");
+}
+
+function myFunction6() {
+   var element = document.body;
+   element.classList.toggle("orange-mode");
+}
+
+function myFunction7() {
+   var element = document.body;
+   element.classList.toggle("purple-mode");
+}
+
+function myFunction8() {
+   var element = document.body;
+   element.classList.toggle("magenta-mode");
+}
+  
+function myFunction11() {
+   var element = document.body;
+   element.classList.toggle("text-black");
+}  
+
+function myFunction12() {
+   var element = document.body;
+   element.classList.toggle("text-red");
+}  
+
+function myFunction13() {
+   var element = document.body;
+   element.classList.toggle("text-blue");
+}  
+
+function myFunction14() {
+   var element = document.body;
+   element.classList.toggle("text-green");
+}  
+
+function myFunction15() {
+   var element = document.body;
+   element.classList.toggle("text-yellow");
+}  
+
+function myFunction16() {
+   var element = document.body;
+   element.classList.toggle("text-orange");
+}  
+
+function myFunction17() {
+   var element = document.body;
+   element.classList.toggle("text-purple");
+}  
+
+function myFunction18() {
+   var element = document.body;
+   element.classList.toggle("text-magenta");
+}  
+</script>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+  document.getElementById("main").style.marginLeft = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+  
+  <script src="https://swetrix.org/swetrix.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    swetrix.init('13a2nGRC9iGh')
+    swetrix.trackViews()
+  })
+</script>
+<noscript>
+  <img
+    src="https://api.swetrix.com/log/noscript?pid=bbS0szbjjP2r"
+    alt=""
+    referrerpolicy="no-referrer-when-downgrade"
+  />
+</noscript>
+   
+</body>
+</html> 
