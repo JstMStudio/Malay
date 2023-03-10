@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Character</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+font-family: Arial;
+padding: 15px;
+background-color: #00C9A7;
+background-image: url("https://github.com/JstMStudio/Teenager-Heroes/blob/Github-Pages/images/background2.jpeg?raw=true");
+background-repeat:no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: cover;
+    background-position: center;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #abff03;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: #961509;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid red;
+  border-top: none;
+  text-align: center;
+  height: 100%;
+  background-color: black;;
+background-repeat: no-repeat;
+background-size: 100% auto;
+    background-position: center;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 4px 4px 4px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffd3ec;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  
+  .collapsible {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align:  center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.active, .collapsible:hover {
+  background-color: green;
+}
+
+.content1 {
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+  background-color: yellow;
+  text-align: center;
+}
+
+.content1 ul {
+text-align: left;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<h2 style="color:#c4f7fb;text-align:center;">Wira Remaja</h2>
+   <a href="index.html">Laman Utama</a>
+   <a href="about.html">Perihal</a>
+   <a href="news.html">Berita</a>
+   <a href="character.html">Watak</a>
+   <a href="story.html">Kisah</a>
+   <a href="location.html">Lokasi</a>
+   <a href="vehicles.html">Kenderaan</a>
+</div>
+
+<div class="tab">
+<button class="tablinks" onclick="openNav()">&#9776;</button>
+<button class="tablinks" onclick="openCity(event, 'TH')">Wira Remaja</button>
+   <button class="tablinks" onclick="openCity(event, 'THC')">Wira Remaja: Kanak-kanak</button>
+   <button class="tablinks" onclick="openCity(event, 'THA')">Wira Remaja: Dewasa</button>
+   <button class="tablinks" onclick="openCity(event, 'VRTH')">Wira Remaja VR</button>
+</div>
+<div style="font-weight:bold;background-color: blue;text-align: center;color:yellow;padding:10px;">
+  <h1>Pengumuman Wira Remaja</h1>
+  <p id="announcements"></p>
+</div>
+
+<div id="TH" class="tabcontent">
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:1px;">
+<h3>Wira Remaja</h3>
+</div>
+<br>
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;">
+<h1>Watak</h1>
+<p>Siri buku Wira Remaja menampilkan banyak watak merentas banyak cerita dan musim. Siri buku Wira Remaja mengandungi banyak watak rekaan hebat yang dibangunkan oleh pasukan Wira Remaja. Semua watak kami merentas semua cerita Wira Remaja disenaraikan di sini:</p>
+  </div>
+<br>
+<br>
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hu Jie</h3>
+<ul>
+   <li>Nama: Hu Jie</li>
+<li>Jantina: Lelaki</li>
+<li>Umur: 14</li>
+<li>Etnik: Cina</li>
+<li>Pekerjaan: Wira</li>
+<li>Penerangan: Hu Jie, wira yang berani dan pantas dalam Wira Remaja. Adik kepada Li Hui.</li>
+<li>Peribadi:
+   <ul>
+<li>Dia berani. Dia melindungi kakaknya apabila mereka menghadapi masalah dan juga berani menghadapi penjahat nakal.</li>
+<li>Dia juga pantas melakukan sesuatu tetapi sangat tidak sabar menunggu.</li>
+<li>Permainan, dia boleh menjadi suka bermain apabila melakukan perkara penting. </li>
+<li>Lucu, dia suka membuat orang lain ketawa, terutamanya kakaknya.</li>
+   </ul>
+   </li>
+<li>Kelemahan:
+   <ul>
+<li>Tidak sabar, dia tidak sabar pada kebanyakan masa dan tidak sabar menunggu orang lain.</li>
+   </ul>
+<li>Kuasa:
+<ul>
+   <li>Kelajuan
+   <li>Berlari, dia boleh berlari dengan sangat pantas dari lokasi A ke lokasi B dalam masa yang singkat. Dia boleh berlari sepantas kilat. </li>
+   <li>Puting beliung, dia boleh berlari dengan sangat pantas untuk mencipta puting beliung kecil di dalam kawasan kecil yang akan menimbulkan angin kencang. </li>
+   <li>Penjana tenaga, dia boleh menjana tenaga elektrik menggunakan kelajuannya yang boleh memulihkan kehabisan kuasa.</li>
+   </ul>
+   </li>
+<li>Alat:
+   <ul>
+<li>Perisai, dia boleh melindungi dirinya daripada serangan musuh dan penjahat dengan bersembunyi di sebalik perisainya.</li>
+   </ul>
+   </li>
+   </ul>
+  </div>
+  <br>
+  <br>
+  <div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;text-align:left;">
+  <h3 style="text-align:center;">Li Hui</h3>
+   <ul>
+     <li>Nama: Li Hui</li>
+     <li>Jantina: Perempuan</li>
+     <li>Umur: 14</li>
+     <li>Etnik: Cina</li>
+   <li>Pekerjaan: Wira</li>
+   <li>Penerangan: Li Hui, kakak kepada Hu Jie. Wira yang pemalu tetapi bijak dalam Wira Remaja. </li>
+   <li>Peribadi:
+     <ul>
+     <li>Li Hui bijak, dia menyelesaikan sebarang masalah sukar dengan mudah.</li>
+     <li>Li Hui juga pemalu, dia takut dengan kebanyakan orang yang dia jumpa.</li>
+     <li>Sweet and Careful, dia boleh berhati-hati menjaga adik lelakinya.</li>
+     </ul>
+   </li>
+   <li>Kelemahan:
+     <ul>
+     <li>Malu, dia takut menghadapi kebanyakan musuh. Dia mudah digeruni oleh musuh yang menakutkan.</li>
+     </ul>
+   </li>
+<li>Kuasa
+   <ul>
+     <li>Teknologi
+       <ul>
+<li>Mengkomputer, dia boleh melakukan beberapa pengkomputeran seperti menyediakan komputer, dsb. Dia boleh menyediakan komputer baharu untuk melakukan perkara yang dia perlukan.</li>
+<li>Menggodam, dia boleh menggodam infrastruktur teknologi lain dan menjadikannya tidak boleh diakses atau perisian tidak selamat.</li>
+       </ul>
+     </li>
+   </ul>
+   </li>
+<li>Alat
+   <ul>
+<li>Bots, dia mempunyai 2 bot menemaninya pada setiap masa yang boleh membantu membawa barangan, mempertahankannya dan lain-lain. Dia boleh memprogramkan bot untuk melakukan apa sahaja yang dia perlukan.</li>
+   </ul>
+   </li>
+   </ul>
+  </div>
+  <br>
+  <br>
+  <div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;text-align:left;">
+   <h3 style="text-align:center;">Min Li</h3>
+   <ul>
+   <li>Nama: Min Li</li>
+   <li>Jantina: Perempuan</li>
+   <li>Umur: 21</li>
+   <li>Etnik: Cina</li>
+   <Li>Pekerjaan: Wira</li>
+   <li>Penerangan: Min Li, kakak kepada Li Hui dan Hu Jie ialah seorang wira dan pelajar universiti.</li>
+   <li>Peribadi: <ul>
+     <li>Min Li bijak, dia sentiasa mempunyai cara untuk menyelesaikan sebarang masalah yang mereka hadapi.</li>
+     <li>Min Li berhati-hati, dia sentiasa mengambil berat tentang adik-adiknya walau dalam apa jua keadaan.</li>
+     <li>Min Li juga mempunyai perangai yang baik, dia sentiasa menghormati dan sopan kepada semua orang dan perasaan mereka.</li>
+     </ul>
+   </li>
+   <li>Kelemahan<ul>
+   <li>Perlahan, Min Li sangat lambat melakukan segala-galanya, menjadikan penjahat melarikan diri dengan mudah.</li>
+     </ul>
+   </li>
+   <li>Kuasa<ul>
+   <li>Kreatif<ul>
+   <li>Melukis, Min Li boleh melukis apa sahaja yang dia mahu dan menjadikannya produk fizikal tanpa minit.</li>
+   <li>Merancang, Min Li sangat pandai mereka bentuk item. Min Li boleh mereka bentuk mana-mana item yang dia mahu dengan kuasanya.</li>
+     </ul>
+     </li>
+     </ul>
+     </li>
+   <li>Alat<ul>
+   <li>Pen Lukisan, ini adalah pen untuk Min Li melukis apa sahaja yang dia mahu dan menjadikannya realiti.</li>
+     </ul>
+     </li>
+    </ul>
+    </div>
+    <br>
+    <br>
+    <div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hua Mei (花美)</h3>
+     <ul>
+       <li>Nama: Hua Mei</li>
+       <li>Jantina: Perempuan</li>
+       <li>Umur: 40</li>
+       <li>Etnik: Cina</li>
+       <li>Pekerjaan: Wira, Saintis</li>
+       <li>Penerangan: Ibu kepada Li Hui, Hu Jie dan Min Li, seorang wira di Perle.</li>
+       <li>Peribadi:<ul>
+       <li>Kebaikan, Hua Mei mempunyai banyak kebaikan kepada anak-anaknya dan orang lain. Hua Mei sentiasa sangat baik kepada Min Li, Li Hui dan Hu Jie juga.</li>
+       <li>Jujur, Hua Mei sangat jujur semasa melakukan sesuatu. Dia akan memberitahu kesilapannya dan meminta maaf atasnya dan tidak akan pernah berbohong.</li>
+       <li>Pintar, Hua Mei sangat pintar dan pintar. Dia boleh menyelesaikan sebarang isu atau masalah yang dia hadapi di mana-mana tempat dan bagaimanapun.</li>
+         </ul>
+       </li>
+       <li>Kelemahan<ul>
+       <li>Terdedah, Hua Mei sangat terdedah kepada sasaran, penyakit dan sering dieksploitasi tanpa diduga.</li>
+         </ul>
+       </li>
+       <li>Kuasa<ul>
+         <li>Kejuruteraan, Hua Mei boleh mencipta sebarang jenis item yang dia mahu.</li>
+         </ul>
+       </li>
+       <li>Alat<ul>
+       <li>Solidizer, Hua Mei boleh mencetak sebarang jenis objek dan item yang dia buat untuk digunakan.</li>
+     </ul>
+   </li>
+   </ul>
+  </div>
+  <br>
+  <br>
+  <div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Ming Hao</h3>
+     <ul>
+       <li>Nama: Ming Hao</li>
+       <li>Jantina: Lelaki</li>
+       <li>Umur: 40</li>
+       <li>Etnik: Cina</li>
+       <li>Pekerjaan: Wira, Saintis</li>
+       <li>Penerangan: Bapa kepada tiga beradik Cina, Li Hui, Hu Jie Dan Min Li, seorang wira di Perle.</li>
+       <li>Peribadi: <ul>
+       <li>Melindungi, Ming Hao sangat melindungi anak-anaknya, Min Li, Hu Jie dan Li Hui. Dia sentiasa melindungi anak-anaknya daripada sebarang masalah dan bahaya.</li>
+       <li>Baik hati, Ming Hao sangat baik kepada anak-anak dan rakan-rakannya. Dia sentiasa menggunakan perkataan yang baik juga.</li>
+       <li>Membantu, Ming Hao sangat membantu. Ming Hao sentiasa membantu dengan apa sahaja yang dia boleh tidak kira.</li>
+         </ul>
+       </li>
+       <li>Kelemahan<ul>
+         <li>Pelupa, Ming Hao sangat pelupa dan sentiasa melupakan perkara yang dia perlukan.</li>
+         </ul>
+       </li>
+       <li>Kuasa<ul>
+       <li>Kekuatan Luar Biasa, Ming Hao mempunyai kekuatan hebat dan boleh menumbuk serta mengangkat apa sahaja yang dia mahu.</li>
+         </ul>
+       </li>
+       <li>Alat<ul>
+         <li>Sarung Tangan Khas, Ming Hao mempunyai sarung tangan khas yang membolehkan Ming Hao menggunakan kekuatan super.</li>
+         </ul>
+       </li>
+     </ul>
+    </div>
+</div>
+</div>
+
+<div id="THC" class="tabcontent">
+<div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:1px;">
+<h3>Wira Remaja: Kanak-kanak</h3>
+</div>
+<br>
+  <div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;">
+<h1>Watak</h1>
+<p>Siri buku Wira Remaja menampilkan banyak watak merentas banyak cerita dan musim. Siri buku Wira Remaja mengandungi banyak watak rekaan hebat yang dibangunkan oleh pasukan Wira Remaja. Semua watak kami merentas semua cerita Wira Remaja disenaraikan di sini:</p>
+</div>
+<br>
+<br>
+<div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hu Jie</h3>
+<ul>
+   <li>Nama: Hu Jie</li>
+<li>Jantina: Lelaki</li>
+<li>Umur: 14</li>
+<li>Etnik: Cina</li>
+<li>Pekerjaan: Wira</li>
+<li>Penerangan: Hu Jie, wira yang berani dan pantas dalam Wira Remaja. Adik kepada Li Hui.</li>
+<li>Peribadi:
+   <ul>
+<li>Dia berani. Dia melindungi kakaknya apabila mereka menghadapi masalah dan juga berani menghadapi penjahat nakal.</li>
+<li>Dia juga pantas melakukan sesuatu tetapi sangat tidak sabar menunggu.</li>
+<li>Permainan, dia boleh menjadi suka bermain apabila melakukan perkara penting. </li>
+<li>Lucu, dia suka membuat orang lain ketawa, terutamanya kakaknya.</li>
+   </ul>
+   </li>
+<li>Kelemahan:
+   <ul>
+<li>Tidak sabar, dia tidak sabar pada kebanyakan masa dan tidak sabar menunggu orang lain.</li>
+   </ul>
+<li>Kuasa:
+<ul>
+   <li>Kelajuan
+   <li>Berlari, dia boleh berlari dengan sangat pantas dari lokasi A ke lokasi B dalam masa yang singkat. Dia boleh berlari sepantas kilat. </li>
+   <li>Puting beliung, dia boleh berlari dengan sangat pantas untuk mencipta puting beliung kecil di dalam kawasan kecil yang akan menimbulkan angin kencang. </li>
+   <li>Penjana tenaga, dia boleh menjana tenaga elektrik menggunakan kelajuannya yang boleh memulihkan kehabisan kuasa.</li>
+   </ul>
+   </li>
+<li>Alat:
+   <ul>
+<li>Perisai, dia boleh melindungi dirinya daripada serangan musuh dan penjahat dengan bersembunyi di sebalik perisainya.</li>
+   </ul>
+   </li>
+   </ul>
+  </div>
+  <br>
+  <br>
+  <div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Li Hui</h3>
+   <ul>
+     <li>Nama: Li Hui</li>
+     <li>Jantina: Perempuan</li>
+     <li>Umur: 14</li>
+     <li>Etnik: Cina</li>
+   <li>Pekerjaan: Wira</li>
+   <li>Penerangan: Li Hui, kakak kepada Hu Jie. Wira yang pemalu tetapi bijak dalam Wira Remaja. </li>
+   <li>Peribadi:
+     <ul>
+     <li>Li Hui bijak, dia menyelesaikan sebarang masalah sukar dengan mudah.</li>
+     <li>Li Hui juga pemalu, dia takut dengan kebanyakan orang yang dia jumpa.</li>
+     <li>Sweet and Careful, dia boleh berhati-hati menjaga adik lelakinya.</li>
+     </ul>
+   </li>
+   <li>Kelemahan:
+     <ul>
+     <li>Malu, dia takut menghadapi kebanyakan musuh. Dia mudah digeruni oleh musuh yang menakutkan.</li>
+     </ul>
+   </li>
+<li>Kuasa
+   <ul>
+     <li>Teknologi
+       <ul>
+<li>Mengkomputer, dia boleh melakukan beberapa pengkomputeran seperti menyediakan komputer, dsb. Dia boleh menyediakan komputer baharu untuk melakukan perkara yang dia perlukan.</li>
+<li>Menggodam, dia boleh menggodam infrastruktur teknologi lain dan menjadikannya tidak boleh diakses atau perisian tidak selamat.</li>
+       </ul>
+     </li>
+   </ul>
+   </li>
+<li>Alat
+   <ul>
+<li>Bots, dia mempunyai 2 bot menemaninya pada setiap masa yang boleh membantu membawa barangan, mempertahankannya dan lain-lain. Dia boleh memprogramkan bot untuk melakukan apa sahaja yang dia perlukan.</li>
+   </ul>
+   </li>
+   </ul>
+  </div>
+  <br>
+  <br>
+  <div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;text-align:left;">
+ <h3 style="text-align:center;">Min Li</h3>
+   <ul>
+   <li>Nama: Min Li</li>
+   <li>Jantina: Perempuan</li>
+   <li>Umur: 21</li>
+   <li>Etnik: Cina</li>
+   <Li>Pekerjaan: Wira</li>
+   <li>Penerangan: Min Li, kakak kepada Li Hui dan Hu Jie ialah seorang wira dan pelajar universiti.</li>
+   <li>Peribadi: <ul>
+     <li>Min Li bijak, dia sentiasa mempunyai cara untuk menyelesaikan sebarang masalah yang mereka hadapi.</li>
+     <li>Min Li berhati-hati, dia sentiasa mengambil berat tentang adik-adiknya walau dalam apa jua keadaan.</li>
+     <li>Min Li juga mempunyai perangai yang baik, dia sentiasa menghormati dan sopan kepada semua orang dan perasaan mereka.</li>
+     </ul>
+   </li>
+   <li>Kelemahan<ul>
+   <li>Perlahan, Min Li sangat lambat melakukan segala-galanya, menjadikan penjahat melarikan diri dengan mudah.</li>
+     </ul>
+   </li>
+   <li>Kuasa<ul>
+   <li>Kreatif<ul>
+   <li>Melukis, Min Li boleh melukis apa sahaja yang dia mahu dan menjadikannya produk fizikal tanpa minit.</li>
+   <li>Merancang, Min Li sangat pandai mereka bentuk item. Min Li boleh mereka bentuk mana-mana item yang dia mahu dengan kuasanya.</li>
+     </ul>
+     </li>
+     </ul>
+     </li>
+   <li>Alat<ul>
+   <li>Pen Lukisan, ini adalah pen untuk Min Li melukis apa sahaja yang dia mahu dan menjadikannya realiti.</li>
+     </ul>
+     </li>
+    </ul>
+    </div>
+    <br>
+    <br>
+    <div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hua Mei (花美)</h3>
+     <ul>
+       <li>Nama: Hua Mei</li>
+       <li>Jantina: Perempuan</li>
+       <li>Umur: 40</li>
+       <li>Etnik: Cina</li>
+       <li>Pekerjaan: Wira, Saintis</li>
+       <li>Penerangan: Ibu kepada Li Hui, Hu Jie dan Min Li, seorang wira di Perle.</li>
+       <li>Peribadi:<ul>
+       <li>Kebaikan, Hua Mei mempunyai banyak kebaikan kepada anak-anaknya dan orang lain. Hua Mei sentiasa sangat baik kepada Min Li, Li Hui dan Hu Jie juga.</li>
+       <li>Jujur, Hua Mei sangat jujur semasa melakukan sesuatu. Dia akan memberitahu kesilapannya dan meminta maaf atasnya dan tidak akan pernah berbohong.</li>
+       <li>Pintar, Hua Mei sangat pintar dan pintar. Dia boleh menyelesaikan sebarang isu atau masalah yang dia hadapi di mana-mana tempat dan bagaimanapun.</li>
+         </ul>
+       </li>
+       <li>Kelemahan<ul>
+       <li>Terdedah, Hua Mei sangat terdedah kepada sasaran, penyakit dan sering dieksploitasi tanpa diduga.</li>
+         </ul>
+       </li>
+       <li>Kuasa<ul>
+         <li>Kejuruteraan, Hua Mei boleh mencipta sebarang jenis item yang dia mahu.</li>
+         </ul>
+       </li>
+       <li>Alat<ul>
+       <li>Solidizer, Hua Mei boleh mencetak sebarang jenis objek dan item yang dia buat untuk digunakan.</li>
+     </ul>
+   </li>
+   </ul>
+  </div>
+  <br>
+  <br>
+  <div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Ming Hao</h3>
+     <ul>
+       <li>Nama: Ming Hao</li>
+       <li>Jantina: Lelaki</li>
+       <li>Umur: 40</li>
+       <li>Etnik: Cina</li>
+       <li>Pekerjaan: Wira, Saintis</li>
+       <li>Penerangan: Bapa kepada tiga beradik Cina, Li Hui, Hu Jie Dan Min Li, seorang wira di Perle.</li>
+       <li>Peribadi: <ul>
+       <li>Melindungi, Ming Hao sangat melindungi anak-anaknya, Min Li, Hu Jie dan Li Hui. Dia sentiasa melindungi anak-anaknya daripada sebarang masalah dan bahaya.</li>
+       <li>Baik hati, Ming Hao sangat baik kepada anak-anak dan rakan-rakannya. Dia sentiasa menggunakan perkataan yang baik juga.</li>
+       <li>Membantu, Ming Hao sangat membantu. Ming Hao sentiasa membantu dengan apa sahaja yang dia boleh tidak kira.</li>
+         </ul>
+       </li>
+       <li>Kelemahan<ul>
+         <li>Pelupa, Ming Hao sangat pelupa dan sentiasa melupakan perkara yang dia perlukan.</li>
+         </ul>
+       </li>
+       <li>Kuasa<ul>
+       <li>Kekuatan Luar Biasa, Ming Hao mempunyai kekuatan hebat dan boleh menumbuk serta mengangkat apa sahaja yang dia mahu.</li>
+         </ul>
+       </li>
+       <li>Alat<ul>
+         <li>Sarung Tangan Khas, Ming Hao mempunyai sarung tangan khas yang membolehkan Ming Hao menggunakan kekuatan super.</li>
+         </ul>
+       </li>
+     </ul>
+    </div>
+  </div>
+</div>
+
+<div id="THA" class="tabcontent">
+<div style="color: #6b1005;background-color:pink;margin:18px;padding:1px;">
+<h3>Wira Remaja: Dewasa</h3>
+</div>
+<br>
+  <div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;">
+    <h1>Characters</h1>
+<p>Teenager Heroes book series featured many characters across many stories and seasons. Teenager Heroes book series contains many awesome designed character developed by Teenager Heroes team. All of our characters across all of Teenager Heroes stories is listed here:</p>
+</div>
+<br>
+<br>
+<div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hu Jie</h3>
+<ul>
+   <li>Nama: Hu Jie</li>
+<li>Jantina: Lelaki</li>
+<li>Umur: 14</li>
+<li>Etnik: Cina</li>
+<li>Pekerjaan: Wira</li>
+<li>Penerangan: Hu Jie, wira yang berani dan pantas dalam Wira Remaja. Adik kepada Li Hui.</li>
+<li>Peribadi:
+   <ul>
+<li>Dia berani. Dia melindungi kakaknya apabila mereka menghadapi masalah dan juga berani menghadapi penjahat nakal.</li>
+<li>Dia juga pantas melakukan sesuatu tetapi sangat tidak sabar menunggu.</li>
+<li>Permainan, dia boleh menjadi suka bermain apabila melakukan perkara penting. </li>
+<li>Lucu, dia suka membuat orang lain ketawa, terutamanya kakaknya.</li>
+   </ul>
+   </li>
+<li>Kelemahan:
+   <ul>
+<li>Tidak sabar, dia tidak sabar pada kebanyakan masa dan tidak sabar menunggu orang lain.</li>
+   </ul>
+<li>Kuasa:
+<ul>
+   <li>Kelajuan
+   <li>Berlari, dia boleh berlari dengan sangat pantas dari lokasi A ke lokasi B dalam masa yang singkat. Dia boleh berlari sepantas kilat. </li>
+   <li>Puting beliung, dia boleh berlari dengan sangat pantas untuk mencipta puting beliung kecil di dalam kawasan kecil yang akan menimbulkan angin kencang. </li>
+   <li>Penjana tenaga, dia boleh menjana tenaga elektrik menggunakan kelajuannya yang boleh memulihkan kehabisan kuasa.</li>
+   </ul>
+   </li>
+<li>Alat:
+   <ul>
+<li>Perisai, dia boleh melindungi dirinya daripada serangan musuh dan penjahat dengan bersembunyi di sebalik perisainya.</li>
+   </ul>
+   </li>
+   </ul>
+  </div>
+  <br>
+  <br>
+  <div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Li Hui</h3>
+   <ul>
+     <li>Nama: Li Hui</li>
+     <li>Jantina: Perempuan</li>
+     <li>Umur: 14</li>
+     <li>Etnik: Cina</li>
+   <li>Pekerjaan: Wira</li>
+   <li>Penerangan: Li Hui, kakak kepada Hu Jie. Wira yang pemalu tetapi bijak dalam Wira Remaja. </li>
+   <li>Peribadi:
+     <ul>
+     <li>Li Hui bijak, dia menyelesaikan sebarang masalah sukar dengan mudah.</li>
+     <li>Li Hui juga pemalu, dia takut dengan kebanyakan orang yang dia jumpa.</li>
+     <li>Sweet and Careful, dia boleh berhati-hati menjaga adik lelakinya.</li>
+     </ul>
+   </li>
+   <li>Kelemahan:
+     <ul>
+     <li>Malu, dia takut menghadapi kebanyakan musuh. Dia mudah digeruni oleh musuh yang menakutkan.</li>
+     </ul>
+   </li>
+<li>Kuasa
+   <ul>
+     <li>Teknologi
+       <ul>
+<li>Mengkomputer, dia boleh melakukan beberapa pengkomputeran seperti menyediakan komputer, dsb. Dia boleh menyediakan komputer baharu untuk melakukan perkara yang dia perlukan.</li>
+<li>Menggodam, dia boleh menggodam infrastruktur teknologi lain dan menjadikannya tidak boleh diakses atau perisian tidak selamat.</li>
+       </ul>
+     </li>
+   </ul>
+   </li>
+<li>Alat
+   <ul>
+<li>Bots, dia mempunyai 2 bot menemaninya pada setiap masa yang boleh membantu membawa barangan, mempertahankannya dan lain-lain. Dia boleh memprogramkan bot untuk melakukan apa sahaja yang dia perlukan.</li>
+   </ul>
+   </li>
+   </ul>
+  </div>
+  <br>
+  <br>
+  <div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;text-align:left;">
+ <h3 style="text-align:center;">Min Li</h3>
+   <ul>
+   <li>Nama: Min Li</li>
+   <li>Jantina: Perempuan</li>
+   <li>Umur: 21</li>
+   <li>Etnik: Cina</li>
+   <Li>Pekerjaan: Wira</li>
+   <li>Penerangan: Min Li, kakak kepada Li Hui dan Hu Jie ialah seorang wira dan pelajar universiti.</li>
+   <li>Peribadi: <ul>
+     <li>Min Li bijak, dia sentiasa mempunyai cara untuk menyelesaikan sebarang masalah yang mereka hadapi.</li>
+     <li>Min Li berhati-hati, dia sentiasa mengambil berat tentang adik-adiknya walau dalam apa jua keadaan.</li>
+     <li>Min Li juga mempunyai perangai yang baik, dia sentiasa menghormati dan sopan kepada semua orang dan perasaan mereka.</li>
+     </ul>
+   </li>
+   <li>Kelemahan<ul>
+   <li>Perlahan, Min Li sangat lambat melakukan segala-galanya, menjadikan penjahat melarikan diri dengan mudah.</li>
+     </ul>
+   </li>
+   <li>Kuasa<ul>
+   <li>Kreatif<ul>
+   <li>Melukis, Min Li boleh melukis apa sahaja yang dia mahu dan menjadikannya produk fizikal tanpa minit.</li>
+   <li>Merancang, Min Li sangat pandai mereka bentuk item. Min Li boleh mereka bentuk mana-mana item yang dia mahu dengan kuasanya.</li>
+     </ul>
+     </li>
+     </ul>
+     </li>
+   <li>Alat<ul>
+   <li>Pen Lukisan, ini adalah pen untuk Min Li melukis apa sahaja yang dia mahu dan menjadikannya realiti.</li>
+     </ul>
+     </li>
+    </ul>
+    </div>
+    <br>
+    <br>
+    <div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hua Mei (花美)</h3>
+     <ul>
+       <li>Nama: Hua Mei</li>
+       <li>Jantina: Perempuan</li>
+       <li>Umur: 40</li>
+       <li>Etnik: Cina</li>
+       <li>Pekerjaan: Wira, Saintis</li>
+       <li>Penerangan: Ibu kepada Li Hui, Hu Jie dan Min Li, seorang wira di Perle.</li>
+       <li>Peribadi:<ul>
+       <li>Kebaikan, Hua Mei mempunyai banyak kebaikan kepada anak-anaknya dan orang lain. Hua Mei sentiasa sangat baik kepada Min Li, Li Hui dan Hu Jie juga.</li>
+       <li>Jujur, Hua Mei sangat jujur semasa melakukan sesuatu. Dia akan memberitahu kesilapannya dan meminta maaf atasnya dan tidak akan pernah berbohong.</li>
+       <li>Pintar, Hua Mei sangat pintar dan pintar. Dia boleh menyelesaikan sebarang isu atau masalah yang dia hadapi di mana-mana tempat dan bagaimanapun.</li>
+         </ul>
+       </li>
+       <li>Kelemahan<ul>
+       <li>Terdedah, Hua Mei sangat terdedah kepada sasaran, penyakit dan sering dieksploitasi tanpa diduga.</li>
+         </ul>
+       </li>
+       <li>Kuasa<ul>
+         <li>Kejuruteraan, Hua Mei boleh mencipta sebarang jenis item yang dia mahu.</li>
+         </ul>
+       </li>
+       <li>Alat<ul>
+       <li>Solidizer, Hua Mei boleh mencetak sebarang jenis objek dan item yang dia buat untuk digunakan.</li>
+     </ul>
+   </li>
+   </ul>
+  </div>
+  <br>
+  <br>
+  <div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Ming Hao</h3>
+     <ul>
+       <li>Nama: Ming Hao</li>
+       <li>Jantina: Lelaki</li>
+       <li>Umur: 40</li>
+       <li>Etnik: Cina</li>
+       <li>Pekerjaan: Wira, Saintis</li>
+       <li>Penerangan: Bapa kepada tiga beradik Cina, Li Hui, Hu Jie Dan Min Li, seorang wira di Perle.</li>
+       <li>Peribadi: <ul>
+       <li>Melindungi, Ming Hao sangat melindungi anak-anaknya, Min Li, Hu Jie dan Li Hui. Dia sentiasa melindungi anak-anaknya daripada sebarang masalah dan bahaya.</li>
+       <li>Baik hati, Ming Hao sangat baik kepada anak-anak dan rakan-rakannya. Dia sentiasa menggunakan perkataan yang baik juga.</li>
+       <li>Membantu, Ming Hao sangat membantu. Ming Hao sentiasa membantu dengan apa sahaja yang dia boleh tidak kira.</li>
+         </ul>
+       </li>
+       <li>Kelemahan<ul>
+         <li>Pelupa, Ming Hao sangat pelupa dan sentiasa melupakan perkara yang dia perlukan.</li>
+         </ul>
+       </li>
+       <li>Kuasa<ul>
+       <li>Kekuatan Luar Biasa, Ming Hao mempunyai kekuatan hebat dan boleh menumbuk serta mengangkat apa sahaja yang dia mahu.</li>
+         </ul>
+       </li>
+       <li>Alat<ul>
+         <li>Sarung Tangan Khas, Ming Hao mempunyai sarung tangan khas yang membolehkan Ming Hao menggunakan kekuatan super.</li>
+         </ul>
+       </li>
+     </ul>
+    </div>
+  </div>
+</div>
+
+<div id="VRTH" class="tabcontent">
+<div style="color: purple;background-color:#a4fc00;margin:18px;padding:1px;">
+<h3>Wira Remaja VR</h3>
+</div>
+<br>
+  <div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;">
+<h1>Watak</h1>
+<p>Siri buku Wira Remaja menampilkan banyak watak merentas banyak cerita dan musim. Siri buku Wira Remaja mengandungi banyak watak rekaan hebat yang dibangunkan oleh pasukan Wira Remaja. Semua watak kami merentas semua cerita Wira Remaja disenaraikan di sini:</p>
+</div>
+<br>
+<br>
+<div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hu Jie</h3>
+<ul>
+   <li>Nama: Hu Jie</li>
+<li>Jantina: Lelaki</li>
+<li>Umur: 14</li>
+<li>Etnik: Cina</li>
+<li>Pekerjaan: Wira</li>
+<li>Penerangan: Hu Jie, wira yang berani dan pantas dalam Wira Remaja. Adik kepada Li Hui.</li>
+<li>Peribadi:
+   <ul>
+<li>Dia berani. Dia melindungi kakaknya apabila mereka menghadapi masalah dan juga berani menghadapi penjahat nakal.</li>
+<li>Dia juga pantas melakukan sesuatu tetapi sangat tidak sabar menunggu.</li>
+<li>Permainan, dia boleh menjadi suka bermain apabila melakukan perkara penting. </li>
+<li>Lucu, dia suka membuat orang lain ketawa, terutamanya kakaknya.</li>
+   </ul>
+   </li>
+<li>Kelemahan:
+   <ul>
+<li>Tidak sabar, dia tidak sabar pada kebanyakan masa dan tidak sabar menunggu orang lain.</li>
+   </ul>
+<li>Kuasa:
+<ul>
+   <li>Kelajuan
+   <li>Berlari, dia boleh berlari dengan sangat pantas dari lokasi A ke lokasi B dalam masa yang singkat. Dia boleh berlari sepantas kilat. </li>
+   <li>Puting beliung, dia boleh berlari dengan sangat pantas untuk mencipta puting beliung kecil di dalam kawasan kecil yang akan menimbulkan angin kencang. </li>
+   <li>Penjana tenaga, dia boleh menjana tenaga elektrik menggunakan kelajuannya yang boleh memulihkan kehabisan kuasa.</li>
+   </ul>
+   </li>
+<li>Alat:
+   <ul>
+<li>Perisai, dia boleh melindungi dirinya daripada serangan musuh dan penjahat dengan bersembunyi di sebalik perisainya.</li>
+   </ul>
+   </li>
+   </ul>
+  </div>
+  <br>
+  <br>
+  <div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Li Hui</h3>
+   <ul>
+     <li>Nama: Li Hui</li>
+     <li>Jantina: Perempuan</li>
+     <li>Umur: 14</li>
+     <li>Etnik: Cina</li>
+   <li>Pekerjaan: Wira</li>
+   <li>Penerangan: Li Hui, kakak kepada Hu Jie. Wira yang pemalu tetapi bijak dalam Wira Remaja. </li>
+   <li>Peribadi:
+     <ul>
+     <li>Li Hui bijak, dia menyelesaikan sebarang masalah sukar dengan mudah.</li>
+     <li>Li Hui juga pemalu, dia takut dengan kebanyakan orang yang dia jumpa.</li>
+     <li>Sweet and Careful, dia boleh berhati-hati menjaga adik lelakinya.</li>
+     </ul>
+   </li>
+   <li>Kelemahan:
+     <ul>
+     <li>Malu, dia takut menghadapi kebanyakan musuh. Dia mudah digeruni oleh musuh yang menakutkan.</li>
+     </ul>
+   </li>
+<li>Kuasa
+   <ul>
+     <li>Teknologi
+       <ul>
+<li>Mengkomputer, dia boleh melakukan beberapa pengkomputeran seperti menyediakan komputer, dsb. Dia boleh menyediakan komputer baharu untuk melakukan perkara yang dia perlukan.</li>
+<li>Menggodam, dia boleh menggodam infrastruktur teknologi lain dan menjadikannya tidak boleh diakses atau perisian tidak selamat.</li>
+       </ul>
+     </li>
+   </ul>
+   </li>
+<li>Alat
+   <ul>
+<li>Bots, dia mempunyai 2 bot menemaninya pada setiap masa yang boleh membantu membawa barangan, mempertahankannya dan lain-lain. Dia boleh memprogramkan bot untuk melakukan apa sahaja yang dia perlukan.</li>
+   </ul>
+   </li>
+   </ul>
+  </div>
+  <br>
+  <br>
+  <div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;text-align:left;">
+ <h3 style="text-align:center;">Min Li</h3>
+   <ul>
+   <li>Nama: Min Li</li>
+   <li>Jantina: Perempuan</li>
+   <li>Umur: 21</li>
+   <li>Etnik: Cina</li>
+   <Li>Pekerjaan: Wira</li>
+   <li>Penerangan: Min Li, kakak kepada Li Hui dan Hu Jie ialah seorang wira dan pelajar universiti.</li>
+   <li>Peribadi: <ul>
+     <li>Min Li bijak, dia sentiasa mempunyai cara untuk menyelesaikan sebarang masalah yang mereka hadapi.</li>
+     <li>Min Li berhati-hati, dia sentiasa mengambil berat tentang adik-adiknya walau dalam apa jua keadaan.</li>
+     <li>Min Li juga mempunyai perangai yang baik, dia sentiasa menghormati dan sopan kepada semua orang dan perasaan mereka.</li>
+     </ul>
+   </li>
+   <li>Kelemahan<ul>
+   <li>Perlahan, Min Li sangat lambat melakukan segala-galanya, menjadikan penjahat melarikan diri dengan mudah.</li>
+     </ul>
+   </li>
+   <li>Kuasa<ul>
+   <li>Kreatif<ul>
+   <li>Melukis, Min Li boleh melukis apa sahaja yang dia mahu dan menjadikannya produk fizikal tanpa minit.</li>
+   <li>Merancang, Min Li sangat pandai mereka bentuk item. Min Li boleh mereka bentuk mana-mana item yang dia mahu dengan kuasanya.</li>
+     </ul>
+     </li>
+     </ul>
+     </li>
+   <li>Alat<ul>
+   <li>Pen Lukisan, ini adalah pen untuk Min Li melukis apa sahaja yang dia mahu dan menjadikannya realiti.</li>
+     </ul>
+     </li>
+    </ul>
+    </div>
+    <br>
+    <br>
+    <div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hua Mei (花美)</h3>
+     <ul>
+       <li>Nama: Hua Mei</li>
+       <li>Jantina: Perempuan</li>
+       <li>Umur: 40</li>
+       <li>Etnik: Cina</li>
+       <li>Pekerjaan: Wira, Saintis</li>
+       <li>Penerangan: Ibu kepada Li Hui, Hu Jie dan Min Li, seorang wira di Perle.</li>
+       <li>Peribadi:<ul>
+       <li>Kebaikan, Hua Mei mempunyai banyak kebaikan kepada anak-anaknya dan orang lain. Hua Mei sentiasa sangat baik kepada Min Li, Li Hui dan Hu Jie juga.</li>
+       <li>Jujur, Hua Mei sangat jujur semasa melakukan sesuatu. Dia akan memberitahu kesilapannya dan meminta maaf atasnya dan tidak akan pernah berbohong.</li>
+       <li>Pintar, Hua Mei sangat pintar dan pintar. Dia boleh menyelesaikan sebarang isu atau masalah yang dia hadapi di mana-mana tempat dan bagaimanapun.</li>
+         </ul>
+       </li>
+       <li>Kelemahan<ul>
+       <li>Terdedah, Hua Mei sangat terdedah kepada sasaran, penyakit dan sering dieksploitasi tanpa diduga.</li>
+         </ul>
+       </li>
+       <li>Kuasa<ul>
+         <li>Kejuruteraan, Hua Mei boleh mencipta sebarang jenis item yang dia mahu.</li>
+         </ul>
+       </li>
+       <li>Alat<ul>
+       <li>Solidizer, Hua Mei boleh mencetak sebarang jenis objek dan item yang dia buat untuk digunakan.</li>
+     </ul>
+   </li>
+   </ul>
+  </div>
+  <br>
+  <br>
+  <div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Ming Hao</h3>
+     <ul>
+       <li>Nama: Ming Hao</li>
+       <li>Jantina: Lelaki</li>
+       <li>Umur: 40</li>
+       <li>Etnik: Cina</li>
+       <li>Pekerjaan: Wira, Saintis</li>
+       <li>Penerangan: Bapa kepada tiga beradik Cina, Li Hui, Hu Jie Dan Min Li, seorang wira di Perle.</li>
+       <li>Peribadi: <ul>
+       <li>Melindungi, Ming Hao sangat melindungi anak-anaknya, Min Li, Hu Jie dan Li Hui. Dia sentiasa melindungi anak-anaknya daripada sebarang masalah dan bahaya.</li>
+       <li>Baik hati, Ming Hao sangat baik kepada anak-anak dan rakan-rakannya. Dia sentiasa menggunakan perkataan yang baik juga.</li>
+       <li>Membantu, Ming Hao sangat membantu. Ming Hao sentiasa membantu dengan apa sahaja yang dia boleh tidak kira.</li>
+         </ul>
+       </li>
+       <li>Kelemahan<ul>
+         <li>Pelupa, Ming Hao sangat pelupa dan sentiasa melupakan perkara yang dia perlukan.</li>
+         </ul>
+       </li>
+       <li>Kuasa<ul>
+       <li>Kekuatan Luar Biasa, Ming Hao mempunyai kekuatan hebat dan boleh menumbuk serta mengangkat apa sahaja yang dia mahu.</li>
+         </ul>
+       </li>
+       <li>Alat<ul>
+         <li>Sarung Tangan Khas, Ming Hao mempunyai sarung tangan khas yang membolehkan Ming Hao menggunakan kekuatan super.</li>
+         </ul>
+       </li>
+     </ul>
+    </div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<script src="announcement.js"></script>
+<!-- Put this at the end of the <body> tag -->
+<script src="https://swetrix.org/swetrix.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    swetrix.init('tUOZrSzLs6uA')
+    swetrix.trackViews()
+  })
+</script>
+<noscript>
+  <img
+    src="https://api.swetrix.com/log/noscript?pid=tUOZrSzLs6uA"
+    alt=""
+    referrerpolicy="no-referrer-when-downgrade"
+  />
+</noscript>
+
+</body>
+</html> 

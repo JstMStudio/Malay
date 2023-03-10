@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+font-family: Arial;
+padding: 15px;
+background-color: #00C9A7;
+background-image: url("https://github.com/JstMStudio/Teenager-Heroes/blob/Github-Pages/images/background2.jpeg?raw=true");
+background-repeat:no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: cover;
+    background-position: center;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #abff03;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: #961509;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid red;
+  border-top: none;
+  text-align: center;
+  height: 100%;
+  background-color: black;
+background-repeat: no-repeat;
+background-size: 100% auto;
+    background-position: center;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 4px 4px 4px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffd3ec;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  
+  .collapsible {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align:  center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.active, .collapsible:hover {
+  background-color: green;
+}
+
+.content1 {
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+  background-color: yellow;
+  text-align: center;
+}
+
+.content1 ul {
+text-align: left;
+}
+
+li {
+text-align:left;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<h2 style="color:#c4f7fb;text-align:center;">Wira Remaja</h2>
+   <a href="index.html">Laman Utama</a>
+   <a href="about.html">Perihal</a>
+   <a href="news.html">Berita</a>
+   <a href="character.html">Watak</a>
+   <a href="story.html">Kisah</a>
+   <a href="location.html">Lokasi</a>
+   <a href="vehicles.html">Kenderaan</a>
+</div>
+
+<div class="tab">
+<button class="tablinks" onclick="openNav()">&#9776;</button>
+<button class="tablinks" onclick="openCity(event, 'TH')">Wira Remaja</button>
+   <button class="tablinks" onclick="openCity(event, 'THC')">Wira Remaja: Kanak-kanak</button>
+   <button class="tablinks" onclick="openCity(event, 'THA')">Wira Remaja: Dewasa</button>
+   <button class="tablinks" onclick="openCity(event, 'VRTH')">Wira Remaja VR</button>
+</div>
+<div style="font-weight:bold;background-color: blue;text-align: center;color:yellow;padding:10px;">
+  <h1>Pengumuman Wira Remaja</h1>
+  <p id="announcements"></p>
+</div>
+
+<div id="TH" class="tabcontent">
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:1px;">
+<h3>Wira Remaja</h3>
+</div>
+<br>
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;">
+<h1>Lokasi</h1>
+<p>Siri buku Wira Remaja mengandungi banyak lokasi hebat, dibangunkan dan dibina oleh pasukan Wira Remaja. Semua lokasi yang disenaraikan di sini ialah lokasi utama yang ditayangkan perdana dalam banyak musim Wira Remaja. Kami mengandungi senarai semua lokasi dalam Wira Remaja di sini.</p>
+</div>
+<br>
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;border-style: solid;border-width: 5px;border-color: purple;">
+<h1>Perle</h1>
+<p>Perle ialah kampung halaman Li Hui dan Hu Jie, tempat mereka dibesarkan. Perle adalah sebuah bandar yang maju. Perle ialah bandar utama dalam Wira Remaja Musim 1. Perle menampilkan persekitaran yang terbaik dan paling bersih. Perle ditetapkan di tempat pada masa hadapan.</p>
+<br>
+   <h3>Tempat</h3>
+   <br>
+   <li>VRzoo: VRzoo ialah zoo di Perle. Ia adalah zoo realiti maya untuk pengunjung melihat haiwan di zoo menggunakan realiti maya.</li>
+   <br>
+   <li>VRmuseum: VRmuseum ialah sebuah muzium besar di Perle. Ia adalah muzium realiti maya untuk semua orang melawati keseluruhan muzium tanpa berjalan kaki dan melawat semua yang dipamerkan menggunakan realiti maya.</li>
+   <br>
+   <li>VRmall: VRmall ialah pusat beli-belah mega di Perle. Ia adalah pusat beli-belah realiti maya untuk semua orang melawat dan membeli barangan. Pelawat boleh menggunakan VR untuk melawat pusat beli-belah realiti maya untuk membeli barangan.</li>
+   <br>
+   <li>Hutan: Perle juga mempunyai hutan mega juga. Hutan Perle menanam pelbagai jenis pokok, daripada beri biru hingga pisang. Hutan mega juga membantu menjaga kebersihan alam sekitar juga.</li>
+   <br>
+   <li>VRschool: Perle juga mempunyai sekolah. Kanak-kanak Perle boleh menghadiri sekolah untuk belajar dalam realiti maya. Perle menyediakan teknologi terbaik untuk pelajar belajar.</li>
+   <br>
+   <li>VRcinema: Perle mempunyai pawagam untuk semua rakyat juga. Pawagam Perle membenarkan semua pemerhati menonton filem dalam realiti maya. Penonton boleh menonton filem di VRcinema bersama keluarga dan rakan mereka.</li>
+   <br>
+   <li>VRbank: Perle juga mempunyai bank. VRbank membolehkan semua orang menyimpan wang di bank dalam dunia realiti maya. VRbank juga membenarkan semua orang menyimpan wang dalam bank realiti maya juga.</li>
+   <br>
+   <li>Peaceful Central（宁中）: Peaceful Central ialah kejiranan di mana rumah kembar berada dan tinggal. Peaceful Central ialah kawasan kejiranan yang indah dan bersih.</li>
+</div>
+</div>
+
+<div id="THC" class="tabcontent">
+<div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:1px;">
+<h3>Wira Remaja: Kanak-kanak</h3>
+</div>
+<br>
+  <div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;">
+<h1>Lokasi</h1>
+<p>Wira Remaja: Kanak-kanak buku kanak-kanak kini mengandungi banyak lokasi hebat, dibangunkan dan dibina oleh pasukan Wira Remaja. Semua lokasi yang disenaraikan di sini ialah lokasi utama yang ditayangkan perdana dalam banyak musim Wira Remaja: Kanak-kanak. Kami mengandungi senarai semua lokasi dalam Wira Remaja: Kanak-kanak di sini.</p>
+  </div>
+  <br>
+<div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;border-style: solid;border-width: 5px;border-color: red;">
+<h1>Perle</h1>
+<p>Perle ialah kampung halaman Li Hui dan Hu Jie, tempat mereka dibesarkan. Perle adalah sebuah bandar yang maju. Perle ialah bandar utama dalam Wira Remaja Musim 1. Perle menampilkan persekitaran yang terbaik dan paling bersih. Perle ditetapkan di tempat pada masa hadapan.</p>
+<br>
+   <h3>Tempat</h3>
+   <br>
+   <li>VRzoo: VRzoo ialah zoo di Perle. Ia adalah zoo realiti maya untuk pengunjung melihat haiwan di zoo menggunakan realiti maya.</li>
+   <br>
+   <li>VRmuseum: VRmuseum ialah sebuah muzium besar di Perle. Ia adalah muzium realiti maya untuk semua orang melawati keseluruhan muzium tanpa berjalan kaki dan melawat semua yang dipamerkan menggunakan realiti maya.</li>
+   <br>
+   <li>VRmall: VRmall ialah pusat beli-belah mega di Perle. Ia adalah pusat beli-belah realiti maya untuk semua orang melawat dan membeli barangan. Pelawat boleh menggunakan VR untuk melawat pusat beli-belah realiti maya untuk membeli barangan.</li>
+   <br>
+   <li>Hutan: Perle juga mempunyai hutan mega juga. Hutan Perle menanam pelbagai jenis pokok, daripada beri biru hingga pisang. Hutan mega juga membantu menjaga kebersihan alam sekitar juga.</li>
+   <br>
+   <li>VRschool: Perle juga mempunyai sekolah. Kanak-kanak Perle boleh menghadiri sekolah untuk belajar dalam realiti maya. Perle menyediakan teknologi terbaik untuk pelajar belajar.</li>
+   <br>
+   <li>VRcinema: Perle mempunyai pawagam untuk semua rakyat juga. Pawagam Perle membenarkan semua pemerhati menonton filem dalam realiti maya. Penonton boleh menonton filem di VRcinema bersama keluarga dan rakan mereka.</li>
+   <br>
+   <li>VRbank: Perle juga mempunyai bank. VRbank membolehkan semua orang menyimpan wang di bank dalam dunia realiti maya. VRbank juga membenarkan semua orang menyimpan wang dalam bank realiti maya juga.</li>
+   <br>
+   <li>Peaceful Central（宁中）: Peaceful Central ialah kejiranan di mana rumah kembar berada dan tinggal. Peaceful Central ialah kawasan kejiranan yang indah dan bersih.</li>
+</div>
+</div>
+
+<div id="THA" class="tabcontent">
+<div style="color: #6b1005;background-color:pink;margin:18px;padding:1px;">
+<h3>Wira Remaja: Dewasa</h3>
+</div>
+<br>
+  <div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;">
+<h1>Lokasi</h1>
+<p>Wira Remaja: Siri buku dewasa juga mengandungi banyak lokasi hebat, dibangunkan dan dibina oleh pasukan Wira Remaja: Dewasa. Semua lokasi yang disenaraikan di sini ialah lokasi utama yang ditayangkan perdana dalam banyak musim Wira Remaja: Dewasa. Kami mengandungi senarai semua lokasi dalam Wira Remaja: Dewasa di sini.</p>
+  </div>
+    <br>
+<div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;border-style: solid;border-width: 5px;border-color: red;">
+<h1>Perle</h1>
+<p>Perle ialah kampung halaman Li Hui dan Hu Jie, tempat mereka dibesarkan. Perle adalah sebuah bandar yang maju. Perle ialah bandar utama dalam Wira Remaja Musim 1. Perle menampilkan persekitaran yang terbaik dan paling bersih. Perle ditetapkan di tempat pada masa hadapan.</p>
+<br>
+   <h3>Tempat</h3>
+   <br>
+   <li>VRzoo: VRzoo ialah zoo di Perle. Ia adalah zoo realiti maya untuk pengunjung melihat haiwan di zoo menggunakan realiti maya.</li>
+   <br>
+   <li>VRmuseum: VRmuseum ialah sebuah muzium besar di Perle. Ia adalah muzium realiti maya untuk semua orang melawati keseluruhan muzium tanpa berjalan kaki dan melawat semua yang dipamerkan menggunakan realiti maya.</li>
+   <br>
+   <li>VRmall: VRmall ialah pusat beli-belah mega di Perle. Ia adalah pusat beli-belah realiti maya untuk semua orang melawat dan membeli barangan. Pelawat boleh menggunakan VR untuk melawat pusat beli-belah realiti maya untuk membeli barangan.</li>
+   <br>
+   <li>Hutan: Perle juga mempunyai hutan mega juga. Hutan Perle menanam pelbagai jenis pokok, daripada beri biru hingga pisang. Hutan mega juga membantu menjaga kebersihan alam sekitar juga.</li>
+   <br>
+   <li>VRschool: Perle juga mempunyai sekolah. Kanak-kanak Perle boleh menghadiri sekolah untuk belajar dalam realiti maya. Perle menyediakan teknologi terbaik untuk pelajar belajar.</li>
+   <br>
+   <li>VRcinema: Perle mempunyai pawagam untuk semua rakyat juga. Pawagam Perle membenarkan semua pemerhati menonton filem dalam realiti maya. Penonton boleh menonton filem di VRcinema bersama keluarga dan rakan mereka.</li>
+   <br>
+   <li>VRbank: Perle juga mempunyai bank. VRbank membolehkan semua orang menyimpan wang di bank dalam dunia realiti maya. VRbank juga membenarkan semua orang menyimpan wang dalam bank realiti maya juga.</li>
+   <br>
+   <li>Peaceful Central（宁中）: Peaceful Central ialah kejiranan di mana rumah kembar berada dan tinggal. Peaceful Central ialah kawasan kejiranan yang indah dan bersih.</li>
+</div>
+</div>
+
+<div id="VRTH" class="tabcontent">
+<div style="color: purple;background-color:#a4fc00;margin:18px;padding:1px;">
+<h3>Wira Remaja VR</h3>
+</div>
+<br>
+  <div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;">
+<h1>Lokasi</h1>
+<p>Siri buku VR Teenager Heroes mengandungi banyak lokasi hebat, dibangunkan dan dibina oleh pasukan Teenager Heroes. Semua lokasi yang disenaraikan di sini ialah lokasi utama yang ditayangkan perdana dalam banyak musim Hero Remaja VR. Pada masa ini kami mengandungi senarai semua lokasi dalam VR Remaja Heroes di sini.</p>
+  </div>
+    <br>
+<div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;border-style: solid;border-width: 5px;border-color: red;">
+<h1>Perle</h1>
+<p>Perle ialah kampung halaman Li Hui dan Hu Jie, tempat mereka dibesarkan. Perle adalah sebuah bandar yang maju. Perle ialah bandar utama dalam Wira Remaja Musim 1. Perle menampilkan persekitaran yang terbaik dan paling bersih. Perle ditetapkan di tempat pada masa hadapan.</p>
+<br>
+   <h3>Tempat</h3>
+   <br>
+   <li>VRzoo: VRzoo ialah zoo di Perle. Ia adalah zoo realiti maya untuk pengunjung melihat haiwan di zoo menggunakan realiti maya.</li>
+   <br>
+   <li>VRmuseum: VRmuseum ialah sebuah muzium besar di Perle. Ia adalah muzium realiti maya untuk semua orang melawati keseluruhan muzium tanpa berjalan kaki dan melawat semua yang dipamerkan menggunakan realiti maya.</li>
+   <br>
+   <li>VRmall: VRmall ialah pusat beli-belah mega di Perle. Ia adalah pusat beli-belah realiti maya untuk semua orang melawat dan membeli barangan. Pelawat boleh menggunakan VR untuk melawat pusat beli-belah realiti maya untuk membeli barangan.</li>
+   <br>
+   <li>Hutan: Perle juga mempunyai hutan mega juga. Hutan Perle menanam pelbagai jenis pokok, daripada beri biru hingga pisang. Hutan mega juga membantu menjaga kebersihan alam sekitar juga.</li>
+   <br>
+   <li>VRschool: Perle juga mempunyai sekolah. Kanak-kanak Perle boleh menghadiri sekolah untuk belajar dalam realiti maya. Perle menyediakan teknologi terbaik untuk pelajar belajar.</li>
+   <br>
+   <li>VRcinema: Perle mempunyai pawagam untuk semua rakyat juga. Pawagam Perle membenarkan semua pemerhati menonton filem dalam realiti maya. Penonton boleh menonton filem di VRcinema bersama keluarga dan rakan mereka.</li>
+   <br>
+   <li>VRbank: Perle juga mempunyai bank. VRbank membolehkan semua orang menyimpan wang di bank dalam dunia realiti maya. VRbank juga membenarkan semua orang menyimpan wang dalam bank realiti maya juga.</li>
+   <br>
+   <li>Peaceful Central（宁中）: Peaceful Central ialah kejiranan di mana rumah kembar berada dan tinggal. Peaceful Central ialah kawasan kejiranan yang indah dan bersih.</li>
+</div>
+    <br>
+<div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;border-style: solid;border-width: 5px;border-color: red;">
+<h1>VRWorld</h1>
+<p>VRWorld ialah dunia realiti maya dalam siri buku VR Teenager Heroes. VRWorld ialah dunia realiti maya mesra privasi termaju yang Li Hui, Hu Jie, Min Li dan ramai lagi gunakan dan hayati dalam kehidupan mereka. VRWorld ialah lokasi utama untuk siri buku VR Teenager Heroes.</p>
+<br>
+   <h3>Tempat</h3>
+   <br>
+   <li>VRLibrary: VRLibrary ialah perpustakaan berdasarkan realiti maya. VRLibrary ialah tempat di mana profil maya Li Hui dan Hu Jie pergi untuk membaca buku secara senyap.</li>
+   <br>
+   <li>VRMall: VRMall ialah sebuah pusat beli-belah di dalam dunia realiti maya VRWorld. VRMall ialah tempat di mana kembar dan rakan mereka membeli-belah, ia adalah tempat yang serupa dengan platform e-dagang pada masa kini.</li>
+   <br>
+   <li>VRBank: VRBank ialah tempat di mana semua orang menyimpan wang di dunia realiti maya. VRBank ialah tempat di mana semua orang boleh menyemak dompet realiti maya mereka masa nyata di rangkaian.</li>
+   <br>
+   <li>VRCinema: VRCinema ialah tempat semua orang menonton filem di dalam bilik dalam dunia realiti maya. VRCinema ialah tempat anda boleh menempah tiket masuk ke dalam bilik menonton filem tertentu.</li>
+   <br>
+   <li>VRMuseum: VRMuseum ialah tempat yang boleh dikunjungi semua orang untuk melihat seni, barangan dan perkara yang mempunyai kepentingan sejarah dan saintifik di dunia realiti maya tanpa perlu keluar rumah.</li>
+   <br>
+   <li>VRSchool: VRSchool ialah tempat si kembar belajar sesuatu, bertemu rakan mereka dan menghabiskan sebahagian besar masa mereka. VRSchool ialah sekolah lanjutan yang berpusat di dunia realiti maya.</li>
+</div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<script src="announcement.js"></script>
+  <!-- Put this at the end of the <body> tag -->
+<script src="https://swetrix.org/swetrix.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    swetrix.init('tUOZrSzLs6uA')
+    swetrix.trackViews()
+  })
+</script>
+<noscript>
+  <img
+    src="https://api.swetrix.com/log/noscript?pid=tUOZrSzLs6uA"
+    alt=""
+    referrerpolicy="no-referrer-when-downgrade"
+  />
+</noscript>
+
+</body>
+</html> 
